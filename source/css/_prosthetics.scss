@@ -1,0 +1,123 @@
+.prosthetics {
+	background-color: var(--additional-color);
+	padding-bottom: 60px;
+}
+.prosthetics-head {
+	text-align: center;
+}
+.prosthetics-item {
+	font-size: 18px;
+	line-height: 160%;
+	color: var(--font-color);
+	margin-bottom: 40px;
+	span {
+		font-weight: 700;
+	}
+}
+.prosthetics-text {
+	text-align: center;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 130%;
+	color: var(--font-color);
+	margin-bottom: 20px;
+}
+.prosthetics-content {
+	display: flex;
+	font-size: 18px;
+	line-height: 160%;
+	color: var(--font-color);
+}
+.prosthetics-content1 {
+	flex: 0 0 545px;
+	p:first-child {
+		&::before {
+			content: "1";
+			font-size: 70px;
+			font-weight: 700;
+			color: rgba(231, 243, 255, 0.979);
+		}
+	}
+}
+.prosthetics-content2 {
+	margin-left: 50px;
+	p:first-child {
+		&::before {
+			content: "2";
+			font-size: 70px;
+			font-weight: 700;
+			color: rgba(231, 243, 255, 0.979);
+		}
+	}
+}
+.prosthetics-img {
+	background-image: url("../img/mhetod/6.jpg");
+	background-repeat: no-repeat;
+	border-radius: 0px 16px 16px 0px;
+	height: 487px;
+}
+.implant {
+	background-color: #ffffff;
+	margin-top: 100px;
+}
+.head-text {
+	text-align: center;
+	margin-bottom: 40px;
+}
+.implant-item {
+	display: flex;
+}
+.implant-text {
+	font-size: 18px;
+	line-height: 160%;
+	color: var(--font-color);
+	margin-right: 24px;
+	flex: 0 0 578px;
+}
+.implant-img {
+	height: 248px;
+}
+.implants {
+	background-color: var(--additional-color);
+}
+.key {
+	background-color: #ffffff;
+}
+.key-item {
+	display: flex;
+	align-items: center;
+}
+.key-title {
+	flex: 0 0 578px;
+}
+.key-list {
+	display: flex;
+	align-items: center;
+	font-size: 18px;
+	line-height: 160%;
+	color: var(--font-color);
+	li {
+		&::before {
+			content: "•";
+			color: var(--main-color);
+			margin-right: 5px;
+			font-size: 30px;
+		}
+	}
+}
+.key-text {
+	display: flex;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 160%;
+	color: var(--font-color);
+	p {
+		flex: 0 0 578px;
+	}
+}
+.key-img {
+	background-image: url("../img/mhetod/8.jpg");
+	background-repeat: no-repeat;
+	height: 733px;
+	border-radius: 16px;
+}

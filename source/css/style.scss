@@ -1,0 +1,87 @@
+$md-max: 1210px;
+$sm-max: 767px;
+
+$sky-blue: #E5F9FF;
+$blue: #11BFF5;
+$dark-blue: #5088fc;
+$ligh-blue: #F7FBFF;
+$black: #104156;
+
+@import "_fonts";
+@import "_keyframes";
+@import "_ui";
+@import "_global";
+@import "_front-page";
+@import "_doctors";
+@import "_constructor";
+@import "_helped";
+@import "_installation";
+@import "_prosthetics";
+@import "_consultation";
+@import "_reviews";
+@import "_works";
+@import "_other-pages";
+@import "_modals";
+@import "_single-doctors";
+@import "_services";
+@import "_summarys";
+
+
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: #c2cfd6; }
+  100% {
+    background-color: #f0f3f5; }
+}
+:root{
+  --bg-color: #ffffff;
+  --bg-color-1: #EAFAFF;
+  --bg-color-2: #AFDCEA;
+  --bg-color-3: #F7FAFF;
+  --bg-color-4: #DFF7FF;
+
+  --dark-blue: #11BFF5;
+  --sky-blue: #E5F9FF;
+
+  --fancy-bg: rgba(17, 191, 245, 0.8);
+  --mega-menu-item-font-color: #104156;
+  --mega-menu-item-color: #F7FAFF;
+  --mega-menu-item-color-h: #EBEEF2;
+  --mega-menu-item-active-color: #EEF4FD;
+  --mega-menu-item-active-color-h: #E2E8F0;
+
+  --summarys-item-color: #87A0AA;
+
+  --placeholder-color: #C4C4C4;
+
+  --font-family: 'Circe', sans-serif;
+  --font-family-additional: 'SourceSansPro', sans-serif;
+
+  --scroll-color: #11BFF5;
+  --main-color: #11BFF5;
+  --additional-color: #F7FBFF;
+  --arrow-bg-color: #ffffff;
+  --arrow-hover-bg-color: #F7FBFF;
+  --ui-simple-bg-color: #AFDCEA;
+  --ui-font-color: #ffffff;
+  --ui-border-color: #11BFF5;
+  --ui-line-color: #E5ECF0;
+  --ui-hover-color: #11BFF5;
+  --ui-hover-font-color: #ffffff;
+  --font-size: 18px;
+  --font-size-s: 16px;
+  --font-size-xs: 14px;
+  --font-color: #104156;
+  --price-btn-color: #a4bdca;
+
+  --breadvrumbs-color: #747474;
+  --page-slider-bg-color: #ffffff;
+}
+
+.grecaptcha-badge{
+  display: none !important;
+  visibility: hidden !important;
+}
+
+@import "_visually-impaired";

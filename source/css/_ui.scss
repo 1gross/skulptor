@@ -1,0 +1,250 @@
+:root{
+  --swiper-pagination-bullet-width: 12px;
+  --swiper-pagination-bullet-height: 12px;
+  --swiper-pagination-color: var(--main-color);
+  --swiper-pagination-bullet-inactive-color: var(--bg-color-2);
+  --swiper-pagination-bullet-inactive-opacity: 1;
+}
+.swiper-progress{
+  height: 4px;
+  background-color: var(--bg-color-1);
+  position: relative;
+  .progress{
+    transition: .1s background-position;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-color);
+    animation-name: progress-line;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-play-state: paused;
+    will-change: transform;
+  }
+}
+.swiper-pagination{
+  display: none;
+  @media screen and (max-width: $md-max){
+      display: block;
+  }
+}
+@keyframes progress-line {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+  border-radius: 8px;
+  font-size: 0.889rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  height: 48px;
+  line-height: 17px;
+  padding: 0 40px;
+  border: 0;
+  color: var(--ui-font-color);
+  transition: .3s background-color ease-in-out, .3s color ease-in-out, .3s border-color ease-in-out;
+  @media screen and (max-width: $sm-max){
+    font-size: 0.778rem;
+    padding: 0 20px;
+  }
+  &:hover {
+    background-color: darken($blue, 7%);
+  }
+  &.w100{
+    width: 100%;
+  }
+  &.small {
+    height: 44px;
+    letter-spacing: initial;
+    @media screen and (max-width: $sm-max){
+      height: 36px;
+    }
+  }
+  &.big {
+    font-size: 1rem;
+    height: 60px;
+    letter-spacing: initial;
+    padding: 0 60px;
+  }
+  &.rounded{
+    border-radius: 49px;
+  }
+  &.outline {
+    border: 2px solid var(--ui-border-color);
+    background-color: transparent;
+    color: var(--main-color);
+    &:hover {
+      background-color: var(--ui-hover-color);
+      color: var(--ui-hover-font-color);
+    }
+  }
+  &.orange {
+    color: var(--ui-font-color);
+    background-color: #FF991E;
+    &:hover {
+      background-color: darken(#FF991E, 7%);
+    }
+  }
+  &.white {
+    color: var(--font-color);
+    background-color: white;
+    &:hover {
+      background-color: darken(white, 7%);
+    }
+  }
+  &.blue {
+    color: var(--ui-font-color);
+    background-color: var(--main-color);
+    &:hover {
+      background-color: darken($blue, 7%);
+    }
+  }
+  &.simple {
+    height: auto;
+    line-height: 1;
+    padding: 5px 0;
+    border-radius: 0;
+    background-color: transparent;
+    color: var(--main-color);
+    letter-spacing: initial;
+    font-weight: 400;
+    border-bottom: 1px dotted var(--main-color);
+    &:hover {
+      color: var(--dark-blue);
+      border-color: var(--dark-blue);
+    }
+    &.big{
+      font-size: 1rem;
+    }
+  }
+  &:disabled{
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: .8;
+    &::after{
+      content: '';
+      opacity: 0;
+      display: block;
+      width: 20px;
+      height: 20px;
+      box-sizing: border-box;
+      margin-top: -10px;
+      border-radius: 50%;
+      border: 3px solid #ffffff;
+      border-left-color: transparent !important;
+      position: absolute;
+      top: 50%;
+      right: -10px;
+      animation: ld-spin 1s infinite linear;
+    }
+  }
+  &.load{
+    position: relative;
+    padding-right: 60px;
+    transition: .2s padding-right;
+    &::after{
+      visibility: visible;
+      opacity: 1;
+      right: 20px;
+      transition: .2s right, .5s opacity;
+    }
+  }
+}
+
+input::placeholder {
+  color: var(--placeholder-color);
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  background-color: white;
+  border: 1px solid #E7F3FF;
+  padding: 10px 20px;
+  line-height: 30px;
+  max-width: 450px;
+  border-radius: 10px;
+  height: 60px;
+  font-size: 1rem;
+  appearance: none;
+  transition: background-color .15s ease-in-out;
+  overflow: hidden;
+  &:focus, &:not(:placeholder-shown), &:-webkit-autofill {
+    background-color: white;
+    transition: background-color .1s ease-in-out;
+  }
+  &:disabled {
+    background-color: white;
+    cursor: not-allowed;
+  }
+  &.w100{
+    max-width: initial;
+  }
+}
+
+.form-control-select{
+  position: relative;
+  &::after{
+    opacity: 0;
+    display: block;
+    width: 26px;
+    height: 26px;
+    box-sizing: border-box;
+    margin-top: -13px;
+    border-radius: 50%;
+    border: 3px solid var(--ui-border-color);
+    border-left-color: transparent !important;
+    position: absolute;
+    top: 50%;
+    right: 55px;
+    animation: ld-spin 1s infinite linear;
+  }
+  &.loading{
+    &::after{
+      content: '';
+      opacity: 1;
+      transition: .2s opacity;
+    }
+  }
+  label{
+    color: #828282;
+    margin-bottom: 8px;
+    display: block;
+  }
+  select {
+    border: 1px solid var(--main-color);
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    display: block;
+    width: 100%;
+    background: url('../img/arrow-blue.svg') white no-repeat calc(100% - 20px) 50% /20px;
+    height: 48px;
+    border-radius: 8px;
+    padding: 0 52px 0 12px;
+    color: black;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    &:disabled{
+      opacity: .3;
+      cursor: not-allowed;
+    }
+    option {
+      background-color: white;
+    }
+  }
+}

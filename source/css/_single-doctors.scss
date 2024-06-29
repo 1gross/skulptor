@@ -1,0 +1,157 @@
+.doctors-jumbotron, .ribbon-doctors{
+  background-color: var(--additional-color);
+  .doctor{
+    padding: 50px 30% 50px 0;
+    background-repeat: no-repeat;
+    background-position: 100%;
+    background-size: auto 100%;
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    @media screen and (max-width: $md-max){
+      padding: 30px 30% 30px 0;
+      min-height: initial;
+      font-size: 0.833rem;
+    }
+    @media screen and (max-width: $sm-max){
+      font-size: 0.778rem;
+      padding: 15px 0 450px;
+      background-size: 300px;
+      background-position: 50% 100%;
+    }
+    .doctor-name{
+      font-size: 36px;
+      line-height: 42px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      @media screen and (max-width: $md-max){
+        font-size: 28px;
+        line-height: 31px;
+      }
+    }
+    .doctor-info{
+      color: var(--main-color);
+      font-weight: bold;
+      margin-bottom: 25px;
+      @media screen and (max-width: $md-max){
+        margin-bottom: 15px;
+      }
+      span{
+        @media screen and (max-width: $md-max){
+          display: block;
+        }
+      }
+      &::after{
+        content: '';
+        margin-top: 15px;
+        display: block;
+        background-color: var(--main-color);
+        width: 76px;
+        height: 2px;
+        @media screen and (max-width: $md-max){
+          margin-top: 10px;
+        }
+      }
+    }
+    .doctor-description{
+      margin-bottom: 25px;
+      padding-right: 15%;
+      @media screen and (max-width: $md-max){
+        margin-bottom: 15px;
+      }
+      @media screen and (max-width: $sm-max){
+        padding-right: 0;
+      }
+    }
+    .doctor-links{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      @media screen and (max-width: $sm-max){
+        width: 100%;
+        flex-wrap: wrap;
+        margin: -5px;
+      }
+      .btn{
+        white-space: nowrap;
+        @media screen and (max-width: $sm-max){
+          flex: 1;
+          margin: 5px;
+        }
+        @media screen and (max-width: $md-max){
+          padding: 0 15px;
+          font-size: 0.833rem;
+        }
+        @media screen and (max-width: $sm-max){
+          font-size: 0.778rem;
+          padding: 0 20px;
+        }
+      }
+      .btn + .btn{
+        margin-left: 25px;
+        @media screen and (max-width: $md-max){
+          margin-left: 15px;
+        }
+        @media screen and (max-width: $sm-max){
+          margin-left: 5px;
+        }
+      }
+    }
+    .certificates{
+      margin-top: 25px;
+      padding-right: 15%;
+      li{
+        & + li{
+          margin-top: 10px;
+        }
+      }
+      .certificate{
+        color: var(--main-color);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        &::before{
+          content: url('../img/certificate.svg');
+          height: 27px;
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}
+
+.ribbon-doctors{
+  background-color: var(--bg-color);
+  section{
+    &:nth-child(even){
+      background-color: var(--additional-color);
+    }
+  }
+  .doctor{
+    min-height: 720px;
+    padding-right: 490px;
+    @media screen and (max-width: $md-max){
+      min-height: 580px;
+      background-position: 100% 100%;
+      padding-right: 290px;
+      background-size: 380px;
+    }
+    @media screen and (max-width: $sm-max){
+      background-position: 50% 20px;
+      background-size: 300px;
+      padding-bottom: 15px;
+      padding-top: 470px;
+      padding-right: 0;
+    }
+    .certificate{
+      span{
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+    }
+  }
+}
